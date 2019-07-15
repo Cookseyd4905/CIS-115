@@ -1,0 +1,56 @@
+// Dustin Cooksey
+
+// C5A1
+
+// 10 July 2019
+
+// This program takes a budget with a total of expenses and then
+// returns to the user whether the user is over or under 
+// budget and by how much.
+
+package c5a1_budgetanlysis_dustincooksey;
+import java.util.Scanner;
+public class C5A1_BudgetAnlysis_DustinCooksey 
+{
+
+    
+    public static void main(String[] args) 
+    {
+         displayInfo();
+         Scanner k = new Scanner(System.in);
+         System.out.print("How much is your total budget? $");
+         double budget = k.nextDouble();
+         double totalExpense = 0;
+         double expense = 0;
+         double totalBudget;
+         String choice = "yes";
+         while (choice.equalsIgnoreCase("yes"))
+            { 
+             System.out.print("Please enter an expense amount: $");
+             expense = k.nextDouble();
+             totalExpense = totalExpense + expense;
+             System.out.println("Would you like to enter an expense?");
+             System.out.println("Enter 1 to continue");
+             System.out.print("Enter a negative number to terminate: ");
+             choice = k.nextLine();
+            }
+        totalBudget = budget - totalExpense;
+         
+         if (totalBudget > 0)
+         {
+             System.out.println("Your budget is $" + totalBudget +" under budget" );
+         }
+         else if (totalBudget == 0)
+         {
+             System.out.println("Your budget is perfectly even");
+         }
+         else
+             System.out.println("Your budget is $" + totalBudget +" over budget");
+         
+    }
+    public static void displayInfo()
+    {
+        System.out.println("Dustin Cooksey");
+        System.out.println("CIS-115-1001");
+    }
+}
