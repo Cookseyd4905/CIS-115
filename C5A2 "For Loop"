@@ -1,0 +1,42 @@
+// Dustin Cooksey
+
+// C5A2
+
+// 15 July 2019
+
+// This program display a multiplication table starting from 
+// 1 and going all the way to 12 showing the product
+// of each.
+package c5a2_multiplicationtable_dustincooksey;
+
+
+public class C5A2_MultiplicationTable_DustinCooksey 
+{
+
+    public static void main(String[] args) 
+    {
+       displayInfo();
+       int counter = 13;
+       int number1;
+       int number2;
+       int product;
+       
+       System.out.println("Number" + "  " + "Number" + "  " + "Product");
+       System.out.println("------------------------------");
+       for (number1 = 1; number1 < counter; number1++)
+       {
+           for (number2 = 1; number2 < counter; number2++)
+           {
+               product = number1 * number2;
+               System.out.println(number1 + "       " + number2 +
+                       "       " + product);
+           }
+       }
+    } 
+    
+    public static void displayInfo()
+    {
+        System.out.println("Dustin Cooksey");
+        System.out.println("CIS-115-1001");
+    }
+}
